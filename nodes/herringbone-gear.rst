@@ -1,15 +1,16 @@
-.. _helical-gear:
+.. _herringbone-gear:
 
-************
-Helical Gear
-************
+****************
+Herringbone Gear
+****************
 
-.. figure:: /images/nodes-helical_gear.png
+.. figure:: /images/nodes-herringbone_gear.png
    :align: right
 
-   The Helical Gear node.
+   The Herringbone Gear node.
 
-The **Helical Gear** group generates a spur gear with a helical twist.
+The **Herringbone Gear** group generates a set of helical gears
+stacked with opposing helix angles.
 
 
 Inputs
@@ -45,8 +46,7 @@ Inputs
 
 |FLOAT| Helix Angle
    The angle, in degrees, specifed from :math:`90^\circ` on the
-   Z-axis. For two matching helical gears the angle of the second gear
-   must have the negated angle value of the first.
+   Z-axis.
 
 |INTEGER_FIELD_SINGLE| Z Faces
    The integer number of horizontal slices that form the resolution of
@@ -54,7 +54,9 @@ Inputs
    you may need more for :math:`45^\circ`.
 
 |BOOLEAN| Left twist
-   Negates the *Helix Angle* for meshing gears.
+   Negates the *Helix Angle* for meshing gears. For the herringbone
+   this sets the angle of the lower gear and an opposite twist is
+   given to the upper gear.
 
 |FLOAT_FIELD_SINGLE| Hole Radius
    The size of the center hole. This may be zero. The upper bound is
@@ -76,14 +78,8 @@ Outputs
 
 Examples
 ========
-.. figure:: /images/eg-meshed_helical_01.png
+
+.. figure:: /images/eg-herringbone_01.png
    :align: right
 
-This example is similar to the
-:ref:`meshed spur <meshed-spur-example>`
-but notice how with meshed helical gears, the
-second gear has a negative matching helix angle.
-
-.. figure:: /images/eg-meshed_helical_02.png
-   :align: center
-   :width: 800
+Here is the simplest view of a 12-to-16 herringbone gear set.

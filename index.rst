@@ -108,6 +108,7 @@ The default clearance is usually sufficient.
 
    installation.rst
    nodes/helical-gear.rst
+   nodes/herringbone-gear.rst
    nodes/spur-gear.rst
 
 Indices and tables
