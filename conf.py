@@ -17,13 +17,12 @@ import datetime
 
 # -- Project information -----------------------------------------------------
 
-gearbox_version = '1.0'
-project = 'Gearbox %s Reference' % gearbox_version
+# The full version, including alpha/beta/rc tags
+version = release = 'v1.3'
+
+project = 'Gearbox %s Reference' % version
 copyright = f': {datetime.date.today().year} by Glen Larsen'
 author = 'Glen (g60) Larsen'
-
-# The full version, including alpha/beta/rc tags
-release = '1.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -32,6 +31,7 @@ release = '1.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinx.ext.githubpages',
 ]
 
 # If true, the ReST sources are included in the HTML build as _sources/name
@@ -75,7 +75,7 @@ if html_theme == "sphinx_rtd_theme":
         "display_version": False,
         "collapse_navigation": True,
         "navigation_depth": -1,
-        "logo_only" : True
+        "logo_only" : False
     }
 
     extensions.append('sphinx_rtd_theme')
@@ -107,11 +107,11 @@ rst_prolog = """
 .. |COLOR| image:: /images/glyph-socket_color.svg
 .. |COLOR_FIELD| image:: /images/glyph-socket_color_field.svg
 .. |COLOR_FIELD_SINGLE| image:: /images/glyph-socket_color_field_single.svg
-""" % gearbox_version
+""" % version
 
 rst_epilog = """
 .. |GEARBOX_ZIPFILE| replace:: gearbox-assets-%s.zip
-""" % gearbox_version
+""" % version
 
 # If true, “(C) Copyright …” is shown in the HTML footer.
 html_show_copyright = True

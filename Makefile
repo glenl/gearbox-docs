@@ -18,3 +18,9 @@ help:
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+rebuild :
+	while true ; do\
+		ls Makefile *.rst */*.rst images/*.png images/*.svg \
+			| entr -cpd make html ;\
+	done\

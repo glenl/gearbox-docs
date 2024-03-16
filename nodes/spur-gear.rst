@@ -12,6 +12,9 @@ Spur Gear
 The **Spur Gear** group generates a simple spur gear.
 
 
+See the section on :ref:`spur-gear-notes` in the :ref:`working-notes`
+for more detail on the math used to generate this node group.
+
 Inputs
 ======
 

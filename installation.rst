@@ -15,11 +15,12 @@ folder named :file:`/home/glenl/modeling/assets`,
 .. figure:: /images/install-pref_dialog.png
    :align: center
 
+   A Blender reference dialog
+
 
 Copy the downloaded :file:`.blend` file to that location and start
 blender. The name on the left defaults to :file:`Assets` but you can
 give it whatever name you want. There may be any number of asset files
-in that folder. In blender, use the asset brower and
-navigate to that asset library. If that is your only asset library you
-will see :file:`Helical Gear` and :file:`Spur Gear` icons that you
-can select and drag into the geometry editor.
+in that folder. In blender, use the asset brower and navigate to that
+asset library. If that is your only asset library you will see various
+images of gears that you can select and drag into the geometry editor.

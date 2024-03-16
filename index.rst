@@ -5,7 +5,7 @@ Gearbox Asset Reference
 
 This asset library contains a collection of geometry nodes that
 generate mathematically accurate gears and gear-related items. My
-goals were to,
+:index:`goals` were to,
 
    * Challenge my math skills
 
@@ -15,9 +15,7 @@ goals were to,
 
    * Create meshes that are topologically sound
 
-
-Gear Geometry
--------------
+.. index:: references
 
 I'm not a mechanical engineer but the geometry of gears is well-known
 and documented throughout the internet. This document doesn't do a
@@ -33,73 +31,47 @@ background,
    * `tec-science
      <https://www.tec-science.com/category/mechanical-power-transmission/involute-gear/>`_
 
-If you have not played with spur gears before, the basic thing to
-learn is that two meshing gears must have the same *module* and
-*profile curve* value. The module declares the length of the
-*addendum*, that part of the cog above the *pitch radius*, as well as
-the length of the *dedendum*, the part of the cog below the *pitch
-radius*. The *profile curve* has a role in the shape of the flank and
-is better explained by the references above. The default is a
-reasonable value.
 
-.. tip:: If you want a physically larger gear, increase the module
-         size.
+Changes in V1.3
+---------------
 
-.. index:: Pitch Diameter
+ * Uses Blender 4.1-beta
 
-The gear's module (:math:`m`) and the number of teeth (:math:`z`) are
-the main inputs to a gear's size. Two gears coincide at their pitch
-point and the diameter of the gear at that point can be given as,
+ * Everything is now sized in meters instead of something
+   smaller. This follows with the normal use of Blender and results in
+   fewer problems when trying to merge vertices of very small
+   components.
 
-.. math:: D_{pitch} = m \times z
+ * Added straight bevel gears.
 
-.. index:: Tip Diameter
+ * Reworked the cog mesh, resulting in fewer vertices.
 
-As mentioned earlier the *module* is the length of the gear's cog
-above the pitch radius, so the diameter at the tip is,
+ * The pressure angle is constrained to a reasonable range. This was
+   necessary because too large an angle can result in a base diameter
+   below the root of the gear.
 
-.. math:: D_{tip} = D_{pitch} + ( m \times 2 )
+ * Categorized many node inputs into panels where.
 
-To construct a set of gears with a specific diameter start with the
-number of teeth and the target diameter, then derive the *module*,
+ * Pumped up documentation, added :ref:`working-notes` in an attempt to
+   keep the math organized.
 
-.. math::
 
-   D_{tip} &= D_{pitch} + ( m \times 2 ) \\
-           &= (m \times z) + ( m \times 2 ) \\
-           &= m \times (z + 2) \\
-         m &= \frac{D_{tip}}{z+2}
+:index:`Working in millimeters`
 
-.. figure:: /images/eg-index_diameter_01.png
-   :align: right
+Gears in millimeters
+--------------------
 
-Of course, we never do math in our head, we use geometry nodes. I've
-constructed an example using a 12-toothed :ref:`node-spur-gear` joined
-with a grid. The target diameter is 1M. This beast of a gear is then
-translated so that the lower left corner is aligned with the origin to
-clarify the dimensions. Modifying either DIAMETER or TEETH will result
-in a grid and gear with matching bounds.
+In early versions I was making an attempt to create gears in
+millimeter sizes. Discovering the error of my ways or, at least, the
+difficulties associated with trying to do that, I now just think in
+meters and leave it up to the user to do any necessary scaling.
 
-.. figure:: /images/eg-index_diameter_02.png
-   :align: center
+The following simple node set shows how to resize a spu gear with a
+module of 3 to its _actual_ size in Blender. I believe most 3D
+printers have the capability of scaling from whatever input.
+
+.. figure:: /images/eg-mm_spur.png
    :width: 800
-
-Regarding clearance
--------------------
-
-The *clearance* value for gears defines additional space added to the
-root between two cogs to allow for the passage of cog of an opposing
-gear. When gears are cut, these are created somewhat naturally by the
-machine tool and usually form a circular shape. That is not strictly
-necessary and, in fact, it would create substantially more topology
-than I was willing to add. The *whole depth* is the total size of the
-gear's cog, from tip to root,
-
-.. math::
-
-   Depth_{whole} = (2 \times m) + (clearance \times m)
-
-The default clearance is usually sufficient.
 
 
 .. toctree::
@@ -107,9 +79,11 @@ The default clearance is usually sufficient.
    :hidden:
 
    installation.rst
+   nodes/bevel-gear.rst
+   nodes/spur-gear.rst
    nodes/helical-gear.rst
    nodes/herringbone-gear.rst
-   nodes/spur-gear.rst
+   working-notes.rst
 
 Indices and tables
 ==================
