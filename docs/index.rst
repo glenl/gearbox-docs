@@ -56,7 +56,7 @@ Changes in V1.3
    keep the math organized.
 
 
-:index:`Working in millimeters`
+.. index:: Working in millimeters
 
 Gears in millimeters
 --------------------

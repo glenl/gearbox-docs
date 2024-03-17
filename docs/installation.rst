@@ -15,7 +15,7 @@ folder named :file:`/home/glenl/modeling/assets`,
 .. figure:: /images/install-pref_dialog.png
    :align: center
 
-   A Blender reference dialog
+   A Blender asset preference dialog
 
 
 Copy the downloaded :file:`.blend` file to that location and start
