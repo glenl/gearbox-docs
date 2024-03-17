@@ -30,9 +30,7 @@ author = 'Glen (g60) Larsen'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-    'sphinx.ext.githubpages',
-]
+extensions = []
 
 # If true, the ReST sources are included in the HTML build as _sources/name
 #html_copy_source = False
