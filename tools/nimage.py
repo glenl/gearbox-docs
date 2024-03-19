@@ -57,7 +57,7 @@ def subArgs():
                         type=int,
                         help='Width in pixels of output image.')
     parser.add_argument('--out-folder',
-                        default='./images',
+                        default='./docs/images',
                         help='Output image location.')
     parser.add_argument('--force',
                         action='store_true',

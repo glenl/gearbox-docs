@@ -8,7 +8,7 @@ Bevel Gear
 .. figure:: /images/nodes-bevel_gear.png
    :align: right
 
-   The Spur Gear node.
+   The Bevel Gear node.
 
 
 The **Bevel Gear** group generates a set of bevel gears, pinion
@@ -100,7 +100,7 @@ Bevel gears with 1:2 ratio
 --------------------------
 
 This example shows a bevel gear set with more teeth on the bull gear
-than the pinion. Still set at :math:`90^\circ`.
+than the pinion. The shaft angle is still set at :math:`90^\circ`.
 
 .. figure:: /images/eg-bevel_16_32.png
    :width: 800

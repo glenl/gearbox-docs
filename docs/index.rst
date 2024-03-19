@@ -80,9 +80,9 @@ printers have the capability of scaling from whatever input.
 
    installation.rst
    nodes/bevel-gear.rst
-   nodes/spur-gear.rst
    nodes/helical-gear.rst
    nodes/herringbone-gear.rst
+   nodes/spur-gear.rst
    working-notes.rst
 
 Indices and tables

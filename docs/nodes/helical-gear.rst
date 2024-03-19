@@ -22,7 +22,9 @@ Inputs
    The number of teeth on the gear.
 
 |FLOAT| Pressure Angle
-   The pressure angle in degrees.
+   The pressure angle in degrees. A typical value is the default
+   :math:`20^\circ` but some gears may need a slight tweak. This value
+   influences the shape of the gear flank.
 
 |INTEGER| Flank Resolution
    This integer value sets the resolution of the sides of the gear
@@ -43,22 +45,22 @@ Inputs
    so that the root straddles the X-axis. This is convenient for
    meshing gears.
 
-|FLOAT| Helix Angle
+|FLOAT_FIELD_SINGLE| Hole Radius
+   The size of the center hole. This may be zero. The upper bound is
+   constrained so the hole can't be larger than the dedendum.
+
+|FLOAT| Twist Degrees
    The angle, in degrees, specifed from :math:`90^\circ` on the
-   Z-axis. For two matching helical gears the angle of the second gear
+   Z-axis. For two meshing helical gears the angle of the second gear
    must have the negated angle value of the first.
+
+|BOOLEAN| Left twist
+   Negates the *Helix Angle* for meshing gears.
 
 |INTEGER_FIELD_SINGLE| Z Faces
    The integer number of horizontal slices that form the resolution of
    the helix. The default is a reasonable value for :math:`20^\circ` but
    you may need more for :math:`45^\circ`.
-
-|BOOLEAN| Left twist
-   Negates the *Helix Angle* for meshing gears.
-
-|FLOAT_FIELD_SINGLE| Hole Radius
-   The size of the center hole. This may be zero. The upper bound is
-   constrained so the hole can't be larger than the dedendum.
 
 Outputs
 =======
