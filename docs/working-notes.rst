@@ -224,7 +224,7 @@ reference points at the intersection of the reference diameters,
    :nowrap:
 
    \begin{eqnarray}
-      R = \frac{d_2}{2\times(\sin d_2)}
+      R = \frac{d_2}{2\times\sin \delta_2}
    \end{eqnarray}
 
 .. index::
@@ -244,3 +244,10 @@ about this but the going recommendation is,
    \begin{eqnarray}
       b < \frac{R}{3}
    \end{eqnarray}
+
+
+==========
+Gear Racks
+==========
+
+tbd
