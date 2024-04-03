@@ -33,7 +33,7 @@ Inputs
    control vertex count. Any large value may be reduced by distance
    merging in the implementation.
 
-|FLOAT_FIELD_SINGLE| Clearance Fac
+|FLOAT| Clearance Fac
    A value from :math:`[0\dots 1]` that is multiplied by the *Module*
    to determine addition depth on the dedendum.
 
@@ -71,6 +71,7 @@ Examples
 
 .. figure:: /images/eg-meshed_spur_01.png
    :align: right
+   :width: 300
 
 Spur gears are simple gears and this example shows how a basic gear
 set can be constructed. The default values are used for both gears

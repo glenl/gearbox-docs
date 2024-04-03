@@ -78,14 +78,19 @@ Outputs
 
 Examples
 ========
+
 .. figure:: /images/eg-meshed_helical_01.png
    :align: right
+   :width: 300
 
-This example is similar to the
-:ref:`meshed spur <meshed-spur-example>`
-but notice how with meshed helical gears, the
-second gear has a negative matching helix angle.
+   12 to 16 meshed helical gears.
+
+This example is similar to the :ref:`meshed spur
+<meshed-spur-example>` but notice how with meshed helical gears, the
+second gear has a negative matching helix angle and an apposing twist.
 
 .. figure:: /images/eg-meshed_helical_02.png
    :align: center
    :width: 800
+
+   Geometry node network for meshed helical gears.

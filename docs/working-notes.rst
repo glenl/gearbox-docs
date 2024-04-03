@@ -78,19 +78,20 @@ Spur gear on plane
    :align: right
    :width: 300
 
-Of course, we never do math in our head, we use geometry nodes. I've
-constructed an example using a 12-toothed :ref:`node-spur-gear` joined
-with a plane. The target diameter is 1M. The gear is then
-translated so that the lower left corner is aligned with the origin to
-clarify the dimensions. Modifying either DIAMETER or TEETH will result
-in a grid and gear with matching bounds.
+Here is an example of creating a gear that fits into a specific
+dimension using geometry nodes. We start with the TARGET shown as a
+rectanglulargrid that is 80mm square and we want to fit a 14-tooth
+spur gear onto it.
 
 .. figure:: /images/eg-index_diameter_02.png
    :align: center
    :width: 800
 
-   Geometry nodes for previous image.
+   Geometry nodes for calculating the module from a target diamter.
 
+Remember that the very first step to working with these nodes is to
+set the Scene Properties to the proper Units. Refer to the
+:ref:`modeling-setup` section for more details.
 
 Angle at base
 ~~~~~~~~~~~~~

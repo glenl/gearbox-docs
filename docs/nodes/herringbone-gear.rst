@@ -31,7 +31,7 @@ Inputs
    reduce vertex count at the expense of smoothness. Any large value
    may be reduced by distance merging in the implementation.
 
-|FLOAT_FIELD_SINGLE| Clearance Fac
+|FLOAT| Clearance Fac
    A value from :math:`[0\dots 1]` that is multiplied by the *Module*
    to determine addition depth on the dedendum.
 
@@ -85,5 +85,18 @@ Examples
 
 .. figure:: /images/eg-herringbone_01.png
    :align: right
+   :width: 300
 
-Here is the simplest view of a 12-to-16 herringbone gear set.
+   12 to 16 herringbone gear set.
+
+Here is a simple example of a 12-to-16 herringbone gear set.
+
+.. figure:: /images/eg-herringbone_02.png
+
+   Geometry node network for a meshed herringbone gear set.
+
+As in spur gears, each member of a gear set has the same module and
+pressure angle. In addition, for any gear with a helix angle it is
+necessary that one member have an apposing twist. For this gear set is
+was also necessary to tick the *half pitch notatation* on one of the
+gears.

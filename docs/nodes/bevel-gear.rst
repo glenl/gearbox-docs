@@ -1,8 +1,8 @@
 .. _node-bevel-gear:
 
-**********
-Bevel Gear
-**********
+**************
+Bevel Gear Set
+**************
 
 
 .. figure:: /images/nodes-bevel_gear.png
@@ -11,10 +11,10 @@ Bevel Gear
    The Bevel Gear node.
 
 
-The **Bevel Gear** group generates a set of bevel gears, pinion
-and a bull gear. Typically, the term pinion refers to the driving
-gear but it is used here to simply distinguish one gear from
-another. The reason bevel gears are provided in pairs is because
+The **Bevel Gear Set** group generates two bevel gears, pinion and a
+bull gear, matched to one another. Typically, the term pinion refers
+to the driving gear but it is used here to distinguish one gear
+from another. The reason bevel gears are provided in pairs is because
 changes in tooth counts on either gear will cause cone angle
 changes. This will become apparent as you use the toolkit.
 
@@ -110,11 +110,11 @@ than the pinion. The shaft angle is still set at :math:`90^\circ`.
 Multiple bevel gear sets
 ------------------------
 
-Multiple bevel gears in a configuration but care must be taken. As
-with spur gears the module must be identical, however, changing the
-number of teeth in a bevel gear set will alter the pitch cone
-apex. Probably the best approach is to use only the gear geometry from
-a single node.
+Multiple bevel gears can be employed in more complex
+configurations. As with spur gears the module must be identical,
+however, changing the number of teeth in a bevel gear set will alter
+the pitch cone apex. Probably the best approach is to use only the
+gear geometry from a single **Bevel Gear Set** node as shown below.
 
 .. figure:: /images/eg-bevel_16_32_32.png
    :width: 800
@@ -122,5 +122,5 @@ a single node.
    Pinion with 16 teeth, driving two bull gears with 32
 
 The bull gear in this configuration was simply rotated
-:math:`180^\circ` and, luckily, the cogs lined up and didn't need any
-alignment adjustments.
+:math:`180^\circ`. The cogs lined up and didn't need any
+other adjustments.

@@ -66,3 +66,22 @@ Outputs
 
 |INTEGER| Teeth
    For convenience, the number of teeth on this gear.
+
+
+Examples
+========
+
+.. figure:: /images/eg-rack_helical_01.png
+   :align: right
+   :width: 300
+
+   Helical gear to helical rack example.
+
+This example shows a helical gear on a rack. Like any other helical
+gear set, the angles must match but one must appose the other. To
+mesh, this ratio required the gear to have a half pitch rotation.
+
+.. figure:: /images/eg-rack_helical_02.png
+   :width: 800
+
+   Geometry node for this helical gear to rack example.
