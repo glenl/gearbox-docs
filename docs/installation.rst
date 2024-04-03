@@ -24,21 +24,3 @@ give it whatever name you want. There may be any number of asset files
 in that folder. In blender, use the asset brower and navigate to that
 asset library. If that is your only asset library you will see various
 images of gears that you can select and drag into the geometry editor.
-
-.. index:: Working in millimeters
-.. index:: Modeling setup
-
-.. _modeling-setup:
-
-Modeling Setup
-==============
-
-Gears are sized in millimeters. You can save yourself lots of sizing
-pain by simply setting your scene properties to scale and use
-millimeters as your are modeling.
-
-.. figure:: /images/setup-scene_properties.png
-   :align: center
-
-   The `Scene Properties` panel with `Unit Scale` and `Length` adjusted to
-   millimeters.

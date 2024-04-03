@@ -68,6 +68,7 @@ except ModuleNotFoundError:
 html_theme_options = {}
 html_theme_path = []
 if html_theme == "sphinx_rtd_theme":
+    html_css_files = ["css/theme_tweaks.css"]
     html_theme_options = {
         # included in the title
         "display_version": False,

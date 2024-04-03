@@ -58,11 +58,8 @@ Changes in V1.3
    :hidden:
 
    installation.rst
-   nodes/bevel-gear.rst
-   nodes/gear-rack.rst
-   nodes/helical-gear.rst
-   nodes/herringbone-gear.rst
-   nodes/spur-gear.rst
+   nodes.rst
+   modeling-tips.rst
    working-notes.rst
 
 Indices and tables

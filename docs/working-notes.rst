@@ -80,7 +80,7 @@ Spur gear on plane
 
 Here is an example of creating a gear that fits into a specific
 dimension using geometry nodes. We start with the TARGET shown as a
-rectanglulargrid that is 80mm square and we want to fit a 14-tooth
+rectanglular grid that is 80mm square and we want to fit a 14-tooth
 spur gear onto it.
 
 .. figure:: /images/eg-index_diameter_02.png
@@ -116,7 +116,7 @@ The :index:`clearance` value for gears defines additional space added to the
 root between two cogs to allow for the passage of the tip of a cog of
 an opposing gear. When gears are cut, these are created somewhat
 naturally by the machine tool and usually form a circular shape. That
-is not strictly necessary and, in fact, it would create substantially
+is not strictly necessary and, in fact, it would create
 more topology than I was willing to add. The :index:`whole depth` is the
 total size of the gear's cog, from tip to root,
 
