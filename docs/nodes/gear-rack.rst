@@ -35,13 +35,9 @@ Inputs
    or smaller tip sizes. In most cases, this value should match the
    pressure angle of the gear to which it is being meshed.
 
-|FLOAT| Height
+|FLOAT_FIELD_SINGLE| Height
    The height of the rack. This is measured from the base to the
-   bottom of the tooth, not counting the clearance.
-
-|FLOAT_FIELD_SINGLE| Clearance Fac
-   A value from :math:`[0\dots 1]` that is multiplied by the *module*
-   to determine addition depth on the dedendum.
+   top of the tooth.
 
 |FLOAT_FIELD_SINGLE| Depth
    The thickness of the rack.
@@ -60,20 +56,20 @@ Outputs
 |GEOMETRY| Geometry
    The output gear rack geometry.
 
-|FLOAT| Pitch height
-   The height from the base to the pitch line. Like circular gears,
-   this value provides the distance necessary for meshing.
-
 |INTEGER| Teeth
    For convenience, the number of teeth on this gear.
 
+This node doesn't output a reference pitch radius like circular
+gears. The origin of the rack is at the pitch center of the first cog
+of the rack. This means that alignment with a circular gear can
+usually be achieved by moving the gear (or rack) orthogonally away by
+the gear's pitch radius. This is shown in the first example below.
 
 Examples
 ========
 
 .. figure:: /images/eg-rack_helical_01.png
    :align: right
-   :width: 300
 
    Helical gear to helical rack example.
 
@@ -85,3 +81,7 @@ mesh, this ratio required the gear to have a half pitch rotation.
    :width: 800
 
    Geometry node for this helical gear to rack example.
+
+The rack is translated on the X-axis one tooth (:math:`m\times\pi`) to
+center the rack under the gear. The gear is translated along the
+Y-axis so that its pitch radius aligns with the rack.

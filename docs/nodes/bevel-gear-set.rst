@@ -1,11 +1,11 @@
-.. _node-bevel-gear:
+.. _node-bevel-gear-set:
 
 **************
 Bevel Gear Set
 **************
 
 
-.. figure:: /images/nodes-bevel_gear.png
+.. figure:: /images/nodes-bevel_gear_set.png
    :align: right
 
    The Bevel Gear node.
@@ -30,7 +30,7 @@ Inputs
 |INTEGER| Pinion Teeth, Bull Teeth
    The number of teeth on the gear.
 
-|FLOAT| Pressure Angle
+|FLOAT_FIELD_SINGLE| Pressure Angle
    The pressure angle in degrees. This effects the shape of the gear
    and plays a role in meshing. The default of :math:`20^\circ` is
    reasonable for most gears.
@@ -53,14 +53,6 @@ Inputs
    cog. The default sets a reasonable default but set this lower if to
    control vertex count. Any large value may be reduced by distance
    merging in the implementation.
-
-|FLOAT_FIELD_SINGLE| Clearance Fac
-   A value from :math:`[0\dots 1]` that is multiplied by the *Module*
-   to determine addition depth on the dedendum.
-
-|FLOAT| Collar Width Fac
-   The value can be thought of as a percentage of the area between the
-   outer perimeter of the bevel collar to the hole.
 
 |FLOAT| Collar Depth
    This adds some control over the length of the collar or spindle

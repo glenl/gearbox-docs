@@ -25,18 +25,12 @@ Inputs
 |FLOAT| Pressure Angle
    The pressure angle in degrees.
 
-|INTEGER| Flank Resolution
-   This integer value sets the resolution of the sides of a gear
-   tooth. The default is a reasonable value, setting it lower will
-   reduce vertex count at the expense of smoothness. Any large value
-   may be reduced by distance merging in the implementation.
-
-|FLOAT| Clearance Fac
-   A value from :math:`[0\dots 1]` that is multiplied by the *Module*
-   to determine addition depth on the dedendum.
-
 |FLOAT| Depth
    The thickness of the gear.
+
+|FLOAT_FIELD_SINGLE| Hole Radius
+   The size of the center hole. This may be zero. The upper bound is
+   constrained so the hole can't be larger than the dedendum.
 
 |BOOLEAN| Half pitch rotation
    All gears are created with a right side cog that straddles the
@@ -44,15 +38,17 @@ Inputs
    so that the root straddles the X-axis. This is convenient for
    meshing gears.
 
-|FLOAT_FIELD_SINGLE| Hole Radius
-   The size of the center hole. This may be zero. The upper bound is
-   constrained so the hole can't be larger than the dedendum.
+|INTEGER| Flank Resolution
+   This integer value sets the resolution of the sides of a gear
+   tooth. The default is a reasonable value, setting it lower will
+   reduce vertex count at the expense of smoothness. Any large value
+   may be reduced by distance merging in the implementation.
 
 |FLOAT| Gap
    The distance between the two helical components that form the
    herringbone.
 
-|FLOAT| Twist Angle
+|FLOAT| Angle
    The angle, in degrees, specifed from :math:`90^\circ` on the
    Z-axis.
 

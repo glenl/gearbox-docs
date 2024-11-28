@@ -21,7 +21,7 @@ Inputs
 |INTEGER| Teeth
    The number of teeth on the gear.
 
-|FLOAT| Pressure Angle
+|FLOAT_FIELD_SINGLE| Pressure Angle
    The pressure angle in degrees. A typical value is the default
    :math:`20^\circ` but some gears may need a slight tweak. This value
    influences the shape of the gear flank.
@@ -32,12 +32,12 @@ Inputs
    control vertex count. Any large value may be reduced by distance
    merging in the implementation.
 
-|FLOAT_FIELD_SINGLE| Clearance Fac
-   A value from :math:`[0\dots 1]` that is multiplied by the *Module*
-   to determine addition depth on the dedendum.
-
 |FLOAT| Depth
    The thickness of the gear.
+
+|FLOAT_FIELD_SINGLE| Hole Radius
+   The size of the center hole. This may be zero. The upper bound is
+   constrained so the hole can't be larger than the dedendum.
 
 |BOOLEAN| Half pitch rotation
    All gears are created with a right side cog that straddles the
@@ -45,11 +45,7 @@ Inputs
    so that the root straddles the X-axis. This is convenient for
    meshing gears.
 
-|FLOAT_FIELD_SINGLE| Hole Radius
-   The size of the center hole. This may be zero. The upper bound is
-   constrained so the hole can't be larger than the dedendum.
-
-|FLOAT| Twist Degrees
+|FLOAT| Angle
    The angle, in degrees, specifed from :math:`90^\circ` on the
    Z-axis. For two meshing helical gears the angle of the second gear
    must have the negated angle value of the first.

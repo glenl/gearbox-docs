@@ -27,18 +27,12 @@ Inputs
 |FLOAT| Pressure Angle
    The pressure angle in degrees.
 
-|INTEGER| Flank Resolution
-   This integer value sets the resolution of the sides of the gear
-   cog. The default sets a reasonable default but set this lower if to
-   control vertex count. Any large value may be reduced by distance
-   merging in the implementation.
-
-|FLOAT| Clearance Fac
-   A value from :math:`[0\dots 1]` that is multiplied by the *Module*
-   to determine addition depth on the dedendum.
-
 |FLOAT| Depth
    The thickness of the gear.
+
+|FLOAT_FIELD_SINGLE| Hole Radius
+   The size of the center hole. This may be zero. The upper bound is
+   constrained so the hole can't be larger than the dedendum.
 
 |BOOLEAN| Half Pitch rotation
    All gears are created with a right side cog that straddles the
@@ -46,9 +40,16 @@ Inputs
    so that the root straddles the X-axis. This is convenient for
    meshing gears.
 
-|FLOAT_FIELD_SINGLE| Hole Radius
-   The size of the center hole. This may be zero. The upper bound is
-   constrained so the hole can't be larger than the dedendum.
+|INTEGER| Flank Resolution
+   This integer value sets the resolution of the sides of the gear
+   cog. The default sets a reasonable default but set this lower if to
+   control vertex count. Any large value may be reduced by distance
+   merging in the implementation.
+
+|INTEGER_FIELD_SINGLE| Z Faces
+   The number of faces along the depth of the tooth. This can be set
+   to 1 if you are going for a minimal pixel count. Larger values can
+   improve the smoothing.
 
 Outputs
 =======

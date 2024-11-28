@@ -32,16 +32,20 @@ background,
      <https://www.tec-science.com/category/mechanical-power-transmission/involute-gear/>`_
 
 
-Changes in V1.3
+Changes in V2.0
 ---------------
 
- * Uses Blender 4.1.1 Release candidate
+ * Uses Blender 4.3 release candidate.
 
  * Added straight bevel gears.
 
  * Added a gear rack node.
 
- * Reworked the cog mesh, resulting in fewer vertices.
+ * Added a beveled shaft
+
+ * Reworked the cog mesh to allow better smoothing.
+
+ * The clearance value was moved to an internal constant value.
 
  * The pressure angle is constrained to a reasonable range. This was
    necessary because too large an angle can result in a base diameter
@@ -49,8 +53,10 @@ Changes in V1.3
 
  * Categorized many node inputs into panels where appropriate.
 
- * Pumped up documentation, added :ref:`working-notes` in an attempt to
+ * Added a :ref:`working-notes` section in an attempt to
    keep the math organized.
+
+ * Added a :ref:`modeling-tips` section to improve usability.
 
 
 .. toctree::
@@ -61,6 +67,7 @@ Changes in V1.3
    nodes.rst
    modeling-tips.rst
    working-notes.rst
+   examples.rst
 
 Indices and tables
 ==================

@@ -11,10 +11,10 @@ development of bevel gears required lots more math notes. I've tried
 my best to keep this page updated with details I needed. As always, I
 need references like wikipedia:
 
- * `Spur Gears
+ * `Spur Gears wiki
    <https://en.wikipedia.org/wiki/Spur_gear>`_
 
- * `Bevel Gears
+ * `Bevel Gears wiki
    <https://en.wikipedia.org/wiki/Bevel_gear>`_
 
 
@@ -87,7 +87,7 @@ spur gear onto it.
    :align: center
    :width: 800
 
-   Geometry nodes for calculating the module from a target diamter.
+   Geometry nodes for calculating the module from a target diameter.
 
 Remember that the very first step to working with these nodes is to
 set the Scene Properties to the proper Units. Refer to the
@@ -251,4 +251,32 @@ about this but the going recommendation is,
 Gear Racks
 ==========
 
-tbd
+
+.. figure:: /images/gear-rack-detail.svg
+   :align: center
+   :width: 300
+
+   Basic dimensions of a gear rack
+
+Where,
+
+.. math::
+   :label: gear-rack
+   :nowrap:
+
+   \begin{eqnarray}
+      m & = & module \\
+      \alpha & = & pressure\ angle \\
+      h & = & 2\times{m} \\
+      pitch & = & m\times\pi
+   \end{eqnarray}
+
+As with other types of gears, sizing a rack depends on the :math:`m`
+value and the shape of the cog depends on :math:`\alpha`. As
+:math:`\alpha` increases the tip and root get narrower.  The center of
+the tooth is the pitch line and is analogous to a circular gear's
+pitch diameter.
+
+Not shown in the diagram is a small clearance below the root (between
+the gears). This clearance is defined in terms of a factor multiplied
+by the module to set the depth and is hardcoded to :math:`0.25`.
