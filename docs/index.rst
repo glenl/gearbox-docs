@@ -17,20 +17,6 @@ generate mathematically accurate gears and gear-related items. My
 
 .. index:: references
 
-I'm not a mechanical engineer but the geometry of gears is well-known
-and documented throughout the internet. This document doesn't do a
-deep dive on the calculations but these sites will provide some useful
-background,
-
-   * `Wikipedia page on the Involute Gear
-     <https://en.wikipedia.org/wiki/Involute_gear>`_ (nice animation here.)
-
-   * `Wikipedia page on the Involute of a circle
-     <https://en.wikipedia.org/wiki/Involute#Involutes_of_a_circle>`_
-
-   * `tec-science
-     <https://www.tec-science.com/category/mechanical-power-transmission/involute-gear/>`_
-
 
 Changes in V2.0
 ---------------
@@ -47,9 +33,9 @@ Changes in V2.0
 
  * The clearance value was moved to an internal constant value.
 
- * The pressure angle is constrained to a reasonable range. This was
-   necessary because too large an angle can result in a base diameter
-   below the root of the gear.
+ * The pressure angle is constrained to a reasonable range. As with
+   all geometry nodes, if you want to over-ride any default, you can
+   plug in the appropriate constant attribute node.
 
  * Categorized many node inputs into panels where appropriate.
 

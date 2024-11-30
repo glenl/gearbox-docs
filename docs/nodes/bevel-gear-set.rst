@@ -16,7 +16,9 @@ bull gear, matched to one another. Typically, the term pinion refers
 to the driving gear but it is used here to distinguish one gear
 from another. The reason bevel gears are provided in pairs is because
 changes in tooth counts on either gear will cause cone angle
-changes. This will become apparent as you use the toolkit.
+changes. This will become apparent as you use the toolkit. Both pinion
+and bull gears have their origin at world center, with the pinion
+translated to properly oppose the bull gear.
 
 See the section on :ref:`bevel-gear-notes` in the :ref:`working-notes`
 for more detail on the math used to generate this node group.

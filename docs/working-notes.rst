@@ -4,19 +4,8 @@
 Working Notes
 *************
 
-.. index:: references
-
-I had some hand-written notes for the first gearbox release but the
-development of bevel gears required lots more math notes. I've tried
-my best to keep this page updated with details I needed. As always, I
-need references like wikipedia:
-
- * `Spur Gears wiki
-   <https://en.wikipedia.org/wiki/Spur_gear>`_
-
- * `Bevel Gears wiki
-   <https://en.wikipedia.org/wiki/Bevel_gear>`_
-
+This chapter captures some notes that I needed as this library was
+developed.
 
 .. _spur-gear-notes:
 
@@ -280,3 +269,23 @@ pitch diameter.
 Not shown in the diagram is a small clearance below the root (between
 the gears). This clearance is defined in terms of a factor multiplied
 by the module to set the depth and is hardcoded to :math:`0.25`.
+
+
+==========
+References
+==========
+
+ * `Spur Gears wiki
+   <https://en.wikipedia.org/wiki/Spur_gear>`_
+
+ * `Bevel Gears wiki
+   <https://en.wikipedia.org/wiki/Bevel_gear>`_
+
+ * `Wikipedia page on the Involute Gear
+   <https://en.wikipedia.org/wiki/Involute_gear>`_ (nice animation here.)
+
+ * `Wikipedia page on the Involute of a circle
+   <https://en.wikipedia.org/wiki/Involute#Involutes_of_a_circle>`_
+
+ * `tec-science
+   <https://www.tec-science.com/category/mechanical-power-transmission/involute-gear/>`_

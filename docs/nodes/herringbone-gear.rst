@@ -60,7 +60,7 @@ Inputs
 |INTEGER_FIELD_SINGLE| Z Faces
    The integer number of horizontal slices that form the resolution of
    the helix. The default is a reasonable value for :math:`20^\circ` but
-   you may need more for :math:`45^\circ`.
+   you may need more for larger values..
 
 Outputs
 =======
