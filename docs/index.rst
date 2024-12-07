@@ -33,9 +33,8 @@ Changes in V2.0
 
  * The clearance value was moved to an internal constant value.
 
- * The pressure angle is constrained to a reasonable range. As with
-   all geometry nodes, if you want to over-ride any default, you can
-   plug in the appropriate constant attribute node.
+ * The pressure angle is constrained to a reasonable range. Several
+   other invalid input values may give error messages.
 
  * Categorized many node inputs into panels where appropriate.
 

@@ -8,6 +8,39 @@ This chapter details several models that were developed as I was
 writing this node library. Many of them are in note form but may be
 useful to the reader.
 
+==========================
+ Constrained Gear System
+==========================
+
+This gear system was discovered while exploring planetary gears. It is
+*constrained* in the sense that the driven gears eventually engage
+the driving gear and to do that they must meet a certain criteria. The
+illustration below is a working system with :math:`Z_1` and :math:`Z_3`
+having 16 teeth, and the :math:`Z_2` gears having 24. The angles,
+:math:`\theta_1` and :math:`\theta_2`, are both equal to :math:`45^\circ`.
+
+.. figure:: /images/constrained-gears.svg
+   :align: center
+
+   A constrained gear system, annotated.
+
+Letting :math:`Z_1, Z_2`, and :math:`Z_3` represent the number of teeth in the
+gears above, the constraint is this:
+
+.. math::
+   :nowrap:
+
+   \begin{eqnarray}
+   {Z_1\theta_1\over{180}}+{{Z_2(180+\theta_1+\theta_2)}\over{180}}+{{Z_3\theta_2}\over{180}}\in\mathbb{Z}
+   \end{eqnarray}
+
+That is, the left side of the equation must yield a whole
+integer. This seemingly odd requirement makes sense if you imagine a
+looping belt engaging in the teeth around :math:`Z_1`, then to the
+right side of :math:`Z_2`, around :math:`Z_3`, then the inside of
+:math:`Z_2`. If the belt is to be constantly engaged, its length must
+represent a whole number of teeth.
+
 =================
  Universal Joint
 =================
@@ -82,36 +115,3 @@ This gives us a Blender math node we can use.
    :width: 800
 
    Calculating :math:`\gamma_2` in geometry nodes.
-
-==========================
- Constrained Gear System
-==========================
-
-This gear system was discovered while exploring planetary gears. It is
-*constrained* in the sense that the driven gears eventually engage
-the driving gear and to do that they must meet a certain criteria. The
-illustration below is a working system with :math:`Z_1` and :math:`Z_3`
-having 16 teeth, and the :math:`Z_2` gears having 24. The angles,
-:math:`\theta_1` and :math:`\theta_2`, are both equal to :math:`45^\circ`.
-
-.. figure:: /images/constrained-gears.svg
-   :align: center
-
-   A constrained gear system, annotated.
-
-Letting :math:`Z_1, Z_2`, and :math:`Z_3` represent the number of teeth in the
-gears above, the constraint is this:
-
-.. math::
-   :nowrap:
-
-   \begin{eqnarray}
-   {Z_1\theta_1\over{180}}+{{Z_2(180+\theta_1+\theta_2)}\over{180}}+{{Z_3\theta_2}\over{180}}\in\mathbb{Z}
-   \end{eqnarray}
-
-That is, the left side of the equation must yield a whole
-integer. This seemingly odd requirement makes sense if you imagine a
-looping belt engaging in the teeth around :math:`Z_1`, then to the
-right side of :math:`Z_2`, around :math:`Z_3`, then the inside of
-:math:`Z_2`. If the belt is to be constantly engaged, its length must
-represent a whole number of teeth.

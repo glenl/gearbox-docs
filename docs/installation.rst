@@ -48,13 +48,20 @@ re-installations.
 Method #2
 =========
 
-If you prefer to organize your own assets, all you need to do
-is copy the unzipped blend file somewhere under the `User Library`
-folder. If you do nothing else, the gearbox assets will be found in an
-area named `Unassigned`. If you want them to appear under something
-called `Gearbox`, you will need to open the blend file, select
-`Current File` in the `Asset Browser` and do the manual work of
-creating and modifying the asset catalog file.
+If you prefer to organize your own assets you probably already know
+what to do. Here is a short summary of the process.
+
+  0. Copy the unzipped blend file into the folder you have named as
+     your `User Library`.
+  1. Open the blend file for the asset.
+  2. The `Asset Browser` will be open in the top-left of
+     the workspace. The `Asset Library` entry should be set to
+     `Current File`.
+  3. Add a new category and name it `Gearbox`
+  4. Select the `Unassigned` category.
+  5. Select all the gearbox assets, drag and drop them into
+     `Gearbox`.
+  6. Save your new category
 
 Some links to the Blender documentation,
 

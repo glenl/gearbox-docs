@@ -63,6 +63,10 @@ Gearbox Nodes
       :doc:`nodes/motor`
          A simple animation driver.
 
+.. NOTE:: All gears now have a *Messages* output that can be attached
+          to the *Group Output* node to give additional messages in
+          the *Property / Tools* panel.
+
 .. toctree::
    :maxdepth: 2
    :hidden:
